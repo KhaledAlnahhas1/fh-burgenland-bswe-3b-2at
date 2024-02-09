@@ -65,9 +65,11 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public List<Person> findByName(String firstName, String lastName) {
         if (firstName.isEmpty() && !lastName.isEmpty()) {
-            return personRepository.findByFirstName(lastName);
+            return personRepository.findByFirstName(firstName);
         } else if (lastName.isEmpty() && !firstName.isEmpty()) {
-            return personRepository.findByLastName(firstName);
+            return personRepository.findByLastName(lastName);
+        } else if (!lastName.isEmpty() && !firstName.isEmpty()) {
+            return personRepository.findByFirstNameAndLastName(firstName,lastName);
         }
         return Lists.newArrayList();
     }
