@@ -31,6 +31,18 @@ public class Note {
     private Person person;
     private String content;
 
+    /**
+     * Creates a new note with the provided details.
+     * this constructor is used for tests.
+     *
+     * @param id      The unique identifier for the note.
+     * @param content The content of the note.
+     */
+    public Note(String id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
     @Override
     public String toString() {
         return "Note [belongsTo=" + this.person + ", text=" + this.content + "]";
