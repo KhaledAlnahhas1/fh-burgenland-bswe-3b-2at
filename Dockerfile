@@ -1,17 +1,7 @@
 FROM ubuntu:20.04
 WORKDIR /app
-
-COPY build.gradle settings.gradle gradlew /app/
-COPY gradle /app/gradle
-
-# Download and cache the Gradle wrapper
-RUN ./gradlew
-
 # Copy the entire project
-COPY . .
-
-# Build the application
-RUN ./gradlew build
+COPY build/libs/*.jar /app/app.jar
 
 # Expose the port the app will run on
 EXPOSE 8080
