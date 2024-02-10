@@ -1,7 +1,6 @@
 package io.muehlbachler.fhburgenland.swm.examination.service;
 
 import io.muehlbachler.fhburgenland.swm.examination.model.Note;
-import io.muehlbachler.fhburgenland.swm.examination.service.impl.NoteServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
