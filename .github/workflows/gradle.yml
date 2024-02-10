@@ -1,15 +1,16 @@
-  name: CI/CD Config
-  on:
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
+name: CI/CD Config
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
