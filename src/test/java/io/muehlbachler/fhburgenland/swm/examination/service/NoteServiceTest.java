@@ -37,6 +37,20 @@ class NoteServiceTest {
         assertEquals(personFirstName, result.get().getPerson().getFirstName());
     }
 
+
+    @Test
+    void testGetNoteByWrongId() {
+        // Arrange
+        String noteId = "FakeID";
+        // Act
+        Optional<Note> result = noteService.get(noteId);
+
+        // Assert
+        assertFalse(result.isPresent());
+
+    }
+
+
     /**
      * Validates the accurate creation of a new note.
      */
