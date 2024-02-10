@@ -23,8 +23,11 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
-      - name: Checkstyle
+      - name: Run Checkstyle
         run: ./gradlew checkstyleMain checkstyleTest
+
+      - name: Run Tests
+        run: ./gradlew test
 
       - name: Build with Gradle
         run: ./gradlew build
