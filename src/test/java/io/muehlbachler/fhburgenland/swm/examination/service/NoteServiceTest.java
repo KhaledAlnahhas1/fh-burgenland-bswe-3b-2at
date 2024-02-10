@@ -1,7 +1,6 @@
 package io.muehlbachler.fhburgenland.swm.examination.service;
 
 import io.muehlbachler.fhburgenland.swm.examination.model.Note;
-import io.muehlbachler.fhburgenland.swm.examination.service.impl.NoteServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +35,20 @@ class NoteServiceTest {
         assertEquals("Note 1", result.get().getContent());
         assertEquals(personFirstName, result.get().getPerson().getFirstName());
     }
+
+
+    @Test
+    void testGetNoteByWrongId() {
+        // Arrange
+        String noteId = "FakeID";
+        // Act
+        Optional<Note> result = noteService.get(noteId);
+
+        // Assert
+        assertFalse(result.isPresent());
+
+    }
+
 
     /**
      * Validates the accurate creation of a new note.
