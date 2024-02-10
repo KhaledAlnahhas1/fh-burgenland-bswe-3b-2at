@@ -1,20 +1,18 @@
 package io.muehlbachler.fhburgenland.swm.examination.controller;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import io.muehlbachler.fhburgenland.swm.examination.model.Note;
+import io.muehlbachler.fhburgenland.swm.examination.model.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import io.muehlbachler.fhburgenland.swm.examination.model.Person;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 public class PersonControllerTest {
@@ -52,7 +50,7 @@ public class PersonControllerTest {
         Person newPerson = new Person();
         newPerson.setFirstName("Sarah");
         newPerson.setLastName("Schmidt");
-        newPerson.setNotes(new ArrayList<Note>());
+        newPerson.setNotes(new ArrayList<>());
 
 
         // Act
