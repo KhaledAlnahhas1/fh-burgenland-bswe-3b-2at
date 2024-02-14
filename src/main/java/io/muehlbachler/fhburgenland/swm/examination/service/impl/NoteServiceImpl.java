@@ -12,6 +12,11 @@ import io.muehlbachler.fhburgenland.swm.examination.service.NoteService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+
+/**
+ * The NoteService provides methods for retrieving, creating, and querying notes.
+ * It is marked as a Spring service using the {@code @Service} annotation.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Service

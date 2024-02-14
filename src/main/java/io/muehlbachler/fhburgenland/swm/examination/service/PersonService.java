@@ -6,6 +6,9 @@ import java.util.Optional;
 import io.muehlbachler.fhburgenland.swm.examination.model.Note;
 import io.muehlbachler.fhburgenland.swm.examination.model.Person;
 
+/**
+ * Service interface for managing persons and associated notes.
+ */
 public interface PersonService {
 
     /**
@@ -33,7 +36,7 @@ public interface PersonService {
 
 
     /**
-     * if any name (first or last) is empty, we only search for the other one
+     * if any name (first or last) is empty, we only search for the other one.
      *
      * @param firstName The first name to search for.
      * @param lastName  The last name to search for.

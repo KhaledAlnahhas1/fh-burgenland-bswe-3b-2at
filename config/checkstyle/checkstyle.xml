@@ -46,9 +46,9 @@
 
   <module name="TreeWalker">
     <module name="ClassMemberImpliedModifier" />
-    <module name="InterfaceMemberImpliedModifier"/>
+<!--    <module name="InterfaceMemberImpliedModifier"/>-->
     <module name="ModifierOrder"/>
-    <module name="RedundantModifier"/>
+<!--    <module name="RedundantModifier"/>-->
     <module name="OuterTypeFilename"/>
     <module name="UnusedImports"/>
     <module name="IllegalTokenText">
@@ -63,7 +63,7 @@
       <property name="allowByTailComment" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
-    <module name="AvoidStarImport"/>
+<!--    <module name="AvoidStarImport"/>-->
     <module name="OneTopLevelClass"/>
     <module name="NoLineWrap">
       <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT"/>

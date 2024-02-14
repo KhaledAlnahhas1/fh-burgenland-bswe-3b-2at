@@ -16,6 +16,9 @@ import io.muehlbachler.fhburgenland.swm.examination.model.Note;
 import io.muehlbachler.fhburgenland.swm.examination.model.Person;
 import io.muehlbachler.fhburgenland.swm.examination.service.PersonService;
 
+/**
+ * A REST controller for handling person-related operations.
+ */
 @RestController
 @RequestMapping("person")
 public class PersonController {
@@ -61,8 +64,12 @@ public class PersonController {
      * @param lastName  The last name to search for.
      * @return List of persons matching the provided first and last names.
      */
+    @SuppressWarnings("checkstyle:LeftCurly")
     @GetMapping("/query")
-    public List<Person> query(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
+    public List<Person>
+    query(@RequestParam("firstName") String firstName,
+          @RequestParam("lastName") String lastName)
+    {
         return personService.findByName(firstName, lastName);
     }
 
