@@ -16,6 +16,10 @@ import io.muehlbachler.fhburgenland.swm.examination.service.PersonService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+/**
+ * This PersonService provides methods for retrieving, creating, and searching persons,
+ * as well as creating notes for specific persons. It uses PersonRepository and NoteService.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Service
