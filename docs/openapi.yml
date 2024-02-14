@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  title: Person and Note API
+  version: 1.0.0
+paths:
+  /person/{id}:
+    get:
+      summary: Retrieve a person by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /person/list:
+    get:
+      summary: Retrieve a list of all persons
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Person'
+  /person/create:
+    post:
+      summary: Create a new person
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+
+components:
+  schemas:
+    Person:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        notes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Note'
+    Note:
+      type: object
+      properties:
+        id:
+          type: string
+        content:
+          type: string
